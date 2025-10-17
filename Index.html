@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+html, body {
+    background: #10051B;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+.header {
+    background: #10051B;
+    display: flex;
+    justify-content: left; 
+    align-items: left;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    min-height: 120px;
+}
+.header-bar {
+    background: transparent;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 24px;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.brand img {    
+    flex: 0 0 400px;   
+    width: 400px;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    padding-left: 200px;
+    border-radius: 0;
+}
+.brand-text {
+    flex: 1 1 auto;   
+    min-width: 0;
+    width: 100%;
+    text-align: left;
+}
+.brand-text .title {
+    margin: 0;
+    width: 800px;
+    font-size: 75px;  
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.05;
+    white-space: normal;     
+    overflow: visible;
+    text-overflow: clip;
+}
+.brand-text .subtitle {
+    margin: 2px 0 0 0;
+    width: 900px;
+    font-size: 50px;
+    color: #dcdcdc;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+.brand-text .subtitle2 {
+    margin: 2px 0 0 0;
+    width: 800px;
+    font-size: 30px;
+    color: #dcdcdc;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+.header-flex {
+    flex: 1;
+}
+.nav {
+    background: #add8e6;
+    display: flex;
+    justify-content: center; 
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.nav-bar {
+    width: 100%;
+    max-width: 1100px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.menu {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #10243b;
+    background: rgba(255,255,255,0.85);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid rgba(16,36,59,0.06);
+    transition: background .15s, transform .08s;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+.menu a:hover {
+    background: rgba(255,255,255,1);
+    transform: translateY(1px);
+}
+.menu a.active {
+    background: #10243b;
+    color: #fff;
+}
+@media (max-width: 640px) {
+    .header {
+        padding: 12px 0;
+        min-height: 72px;
+    }
+    .header-bar {
+        padding: 0 16px;
+    }
+    .brand {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .brand img {
+        flex: 0 0 200px;
+        width: 200px;
+        max-width: 80%;
+    }
+    .brand-text .title { font-size: 18px; }
+    .brand-text .subtitle { font-size: 12px; }
+    .nav-bar { padding: 8px 12px; }
+    .menu {
+        gap: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+        .menu a { padding: 8px 12px; font-size: 14px; }
+}
+.content {
+    background: transparent;
+    padding: 36px 0;
+}
+.content-bar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px; 
+    gap: 20px;
+    align-items: start;
+}
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    color: #10243b;
+}
+.h1 {
+    font-size: 28px;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+.p {
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+    color: #333;
+}
+</style>
+<body>
+    <header class="header">
+        <div class="header-bar">
+            <div class="brand">
+                <img src="Logo1.jpg" alt="ICI College BACOMM brand logo">
+                <div class="brand-text">
+                    <div class="subtitle">ICI COLLEGE OF ARTS & TECHNOLOGY</div>
+                    <h1 class="title">BACHELOR OF ARTS IN COMMUNICATION</h1>
+                    <div class="subtitle2">DEPARTMENT AND FLEXIBLE EDUCATION</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-bar">
+            <div class="menu">
+                <a href="#" class="active">Home</a>
+                <a href="#">Schedule</a>
+                <a href="#">About</a>
+                <a href="#">Admissions</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main class="content" role="main">
+        <div class="content-bar">
+            <div class="content-grid">
+                <!-- Main column -->
+                <section class="card" aria-labelledby="main-heading">
+                    <h1 id="main-heading" class="h1">Welcome</h1>
+                    <p class="p">This is the main content area. Replace this text with your page content — articles, images, or whatever you need. The layout is responsive and will stack on smaller screens.</p>
+                    <p class="p">Add more sections, lists, or components inside this card or create additional cards below.</p>
+                </section>
+
+                <!-- Sidebar -->
+                <aside class="card" aria-label="Sidebar">
+                    <h2 class="h1" style="font-size:18px;margin-bottom:8px;">Quick Links</h2>
+                    <ul style="margin:0;padding:0 0 0 18px;color:#333;">
+                        <li><a href="#">Program overview</a></li>
+                        <li><a href="#">Apply now</a></li>
+                        <li><a href="#">Contact admissions</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
